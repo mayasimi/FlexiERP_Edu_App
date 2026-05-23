@@ -4,12 +4,20 @@ import { useQuery } from '@tanstack/react-query'
 import AppLayout from '@/components/layout/AppLayout'
 import { messagingApi } from '@/lib/api'
 import { getInitials } from '@/lib/utils'
+<<<<<<< HEAD
+import { adminMockViews } from '@/lib/admin-mock-db'
+=======
+>>>>>>> origin/main
 import {
   Pencil, Inbox, Send, FileText, Users,
   Bell, Mail, Calendar, Trash2, Reply, Forward,
   AlertCircle, CheckCircle, User
 } from 'lucide-react'
 
+<<<<<<< HEAD
+const MOCK_INBOX = adminMockViews.messaging.inbox
+const MOCK_MESSAGE = adminMockViews.messaging.message
+=======
 const MOCK_INBOX = [
   { id: '1', sender: 'Dr. Emily Chen', subject: 'Q3 Syllabus Updates Needed', preview: 'Please review the attached changes for t…', time: '09:42 AM', read: false, label: 'Faculty' },
   { id: '2', sender: 'Admissions Office', subject: 'Incoming Freshman Orientation', preview: 'The schedule for next week\'s orientation i…', time: 'Yesterday', read: true, label: null },
@@ -25,14 +33,18 @@ const MOCK_MESSAGE = {
   date: 'Oct 24, 2023, 2:30 PM',
   body: `Hello Administration Team,\n\nThe schedule for next week's incoming freshman orientation has been finalized and approved by the Dean's office. We are expecting approximately 450 new students to attend across the three-day event.\n\nKey highlights that require your attention:\n\n• The opening keynote is scheduled for Monday at 9:00 AM in the Main Auditorium. Please ensure AV setup is completed by 8:00 AM.\n\n• Registration packets are currently being assembled in Room 104 and will be ready for distribution on Sunday evening.\n\n• We need final confirmation on the departmental breakout room assignments. Please review the attached spreadsheet.\n\nLet's schedule a brief 15-minute sync call before the weekend to align on any last-minute logistics.`,
 }
+>>>>>>> origin/main
 
 const LABELS = ['Urgent', 'Faculty', 'Students']
 const labelColors: Record<string, string> = {
   Urgent: '#EF4444', Faculty: '#10B981', Students: '#3B82F6'
 }
 
+<<<<<<< HEAD
+=======
 const BULK_TEMPLATES = ['Tuition Reminder', 'Faculty Handbook', 'Campus Alert']
 
+>>>>>>> origin/main
 export default function MessagingPage() {
   const [activeMsg, setActiveMsg] = useState(MOCK_MESSAGE)
   const [folder, setFolder] = useState<'inbox' | 'sent' | 'drafts'>('inbox')
@@ -180,6 +192,9 @@ export default function MessagingPage() {
           </div>
         </div>
 
+<<<<<<< HEAD
+
+=======
         {/* Far Right: Bulk Templates */}
         <div className="w-48 flex-shrink-0 border-l p-4 bg-white" style={{ borderColor: '#E4E1D8' }}>
           <h3 className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#6B6660' }}>Bulk Templates</h3>
@@ -193,6 +208,7 @@ export default function MessagingPage() {
             ))}
           </div>
         </div>
+>>>>>>> origin/main
       </div>
     </AppLayout>
   )
